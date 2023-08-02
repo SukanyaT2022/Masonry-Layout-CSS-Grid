@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.main-grid{
+    display: grid;
+border: 5px solid burlywood;
+    grid-template-columns: repeat(4,1fr);
+    /* //width */
+    grid-template-rows: 200px 300px 100px 100px;
+    /* how many row aboce row 1 is 200px row2 is 300px --we add 3 row for more space*/
+    grid-gap:10px;
+}
+ .one{
+background-color:pink;
+grid-row: 1/3;
+/* 1/3 means take row 1 and row 2 together--means take 2 row*/
+/* grid row expand from top to bottom-vertical */
+padding: 10px;
+text-align: center;
+}
+.one img{
+    width: 80%;
+    height: 300px;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+    margin-top: 20px;
+}
+ .two{
+    background-color:green; 
+    grid-row: 2/4;  
+    /* grid row expand from top to bottom-vertical */
+}
+ .three{
+    background-color:orange; 
+    grid-column: 2/4;
+    /* grid colum expand from left to right */
+}
+ .four{
+    background-color:purple; 
+}
+ .five{
+    background-color:rgb(208, 255, 0);  
+    grid-column: 3/5;
+    grid-row: 2/4;  
+}
+ .six{
+    background-color:rgb(43, 42, 40);  
+}
+ .seven{
+    background-color:navy;  
+}
+ .eight{
+    background-color:red; 
+}
+ /*ipad*/
+ @media screen and (max-width: 992px) {
+    .main-grid{
+
+    grid-template-columns: repeat(2,1fr);
+    /* //width */
+    grid-template-rows: 200px 300px 100px 100px 200px ;
+    /* how many row aboce row 1 is 200px row2 is 300px --we add 3 row for more space*/
+    grid-gap:10px;
+}
+.four{
+    background-color:purple; 
+    grid-row: 4/5;
+    grid-column: 1/2;
+}
+ .five{
+    background-color:rgb(208, 255, 0);  
+    grid-column: 2/3;
+    grid-row: 4/5;  
+}
+.eight{
+    background-color:red; 
+    grid-column: 2/3;
+}
+.six{
+    background-color:rgb(43, 42, 40);  
+    grid-column: 1/2;
+}
+.seven{
+    background-color:navy;  
+    grid-column: 1/2;
+}
+   
+}
+
+/*ipad-mini*/
+@media screen and (max-width: 768px) {
+}
+
+/*phone*/
+@media screen and (max-width: 600px) {
+    .main-grid{
+    display: grid;
+border: 5px solid burlywood;
+    grid-template-columns: repeat(1,1fr);
+    /* //width */
+    grid-template-rows: 200px 300px 100px 100px 300px 400px 500px 100px ;
+    /* height how many row aboce row 1 is 200px row2 is 300px --we add 3 row for more space*/
+    grid-gap:10px;
+}
+ .one{
+background-color:pink;
+grid-row: 1/2;
+grid-column: 1/2;
+
+}
+.one img{
+    width: 50%;
+    height: 50px;
+
+}
+
+ .two{
+    grid-row: 2/3;
+grid-column: 1/2;
+
+}
+ .three{
+    grid-row: 3/4;
+grid-column: 1/2;
+}
+ .four{
+    grid-row: 4/5;
+grid-column: 1/2;
+}
+ .five{
+    grid-row: 5/6;
+grid-column: 1/2;
+}
+ .six{
+    grid-row: 6/7;
+grid-column: 1/2;
+}
+ .seven{
+    grid-row: 7/8;
+grid-column: 1/2;
+}
+ .eight{
+    grid-row: 8/9;
+grid-column: 1/2;
+}
+}
+ 
+
+</style>
+<body>
+<div class="main-grid">
+
+<div class="smallGrid one">
+<img src="https://cdn.pixabay.com/photo/2015/03/18/21/17/bora-bora-680010_1280.jpg">
+<h2>Bora Bora</h2>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, laudantium!</p>
+</div>
+<div class="smallGrid two">
+    2
+    </div>
+    <div class="smallGrid three">
+        3
+        </div>
+        <div class="smallGrid four">
+            4
+            </div>
+            <div class="smallGrid five">
+                5
+                </div>
+                <div class="smallGrid six">
+                    6
+                    </div>
+                    <div class="smallGrid seven">
+                        7
+                        </div>
+                        <div class="smallGrid eight">
+                            8
+                            </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+   
+</body>
+</html>
